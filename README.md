@@ -20,6 +20,13 @@ docker push dxpcf/pubsub-python-subscriber:latest-linux-amd64
 docker push dxpcf/pubsub-node-subscriber:latest-linux-amd64
 ```
 
+## install redis
+```
+helm repo add bitnami https://charts.bitnami.com/bitnami
+helm repo update
+helm install redis bitnami/redis
+```
+
 ## deploy pubsub component
 ```
 cd deploy
@@ -28,13 +35,6 @@ dapr components -k
 ```
 
 # Demo1: redis state store
-## install redis
-```
-helm repo add bitnami https://charts.bitnami.com/bitnami
-helm repo update
-helm install redis bitnami/redis
-```
-
 ## deploy state store component
 ```
 kubectl apply -f statestore-redis.yaml
