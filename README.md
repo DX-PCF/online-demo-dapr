@@ -1,5 +1,11 @@
 # Prerequisite
-## install dapr
+## install necessary soft
+- kubectl
+- dapr cli
+- helm
+- docker
+
+## install dapr runtime
 ```
 kubectl create ns dapr-system
 helm repo add dapr https://dapr.github.io/helm-charts/
@@ -41,20 +47,20 @@ kubectl apply -f statestore-redis.yaml
 dapr components -k
 ```
 
-## deploy service
+## deploy services
 ```
 kubectl apply -f react-form.yaml
 kubectl apply -f node-subscriber.yaml
 kubectl apply -f python-subscriber.yaml
 ```
 
-## send message
+## send messages
 ```
 kubectl port-forward service/react-form 8000:80
 //open http://localhost:8000 on your browser and sent message to topic A, B, C
 ```
 
-## check application log
+## check application logs
 ```
 kubectl logs <node-subscriber pod name> -c node-subscriber
 kubectl logs <python-subscriber pod name> -c python-subscriber
@@ -89,9 +95,15 @@ kubectl apply -f statestore-memcached.yaml
 dapr components -k
 ```
 
-## restart application
+## restart applications
 ```
 kubectl rollout restart deployment react-form node-subscriber python-subscriber
+```
+
+## send messages
+```
+kubectl port-forward service/react-form 8000:80
+//open http://localhost:8000 on your browser and sent message to topic A, B, C
 ```
 
 ## check memcached records
