@@ -11,8 +11,10 @@ dapr status -k
 
 ## make docker images and push to docker hub
 ```
-docker login --username dxpcf
+git clone https://github.com/DX-PCF/online-demo-dapr.git
+cd online-demo-dapr/demo
 make
+docker login --username dxpcf
 docker push dxpcf/pubsub-react-form:latest-linux-amd64
 docker push dxpcf/pubsub-python-subscriber:latest-linux-amd64
 docker push dxpcf/pubsub-node-subscriber:latest-linux-amd64
@@ -20,7 +22,7 @@ docker push dxpcf/pubsub-node-subscriber:latest-linux-amd64
 
 ## deploy pubsub component
 ```
-cd demo/deploy
+cd deploy
 kubectl apply -f pubsub-redis.yaml
 dapr components -k
 ```
