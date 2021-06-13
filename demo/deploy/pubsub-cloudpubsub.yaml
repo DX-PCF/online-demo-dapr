@@ -20,4 +20,4 @@ spec:
   - name: clientX509CertUrl
     value: https://www.googleapis.com/robot/v1/metadata/x509/online-demo.iam.gserviceaccount.com
   - name: disableEntityManagement
-    value: "false"
+    value: false
