@@ -18,6 +18,6 @@ spec:
   - name: authProviderX509CertUrl
     value: https://www.googleapis.com/oauth2/v1/certs
   - name: clientX509CertUrl
-    value: https://www.googleapis.com/robot/v1/metadata/x509/Online-Demo.iam.gserviceaccount.com #replace PROJECT_NAME
+    value: https://www.googleapis.com/robot/v1/metadata/x509/online-demo.iam.gserviceaccount.com
   - name: disableEntityManagement
     value: "false"
