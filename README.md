@@ -36,14 +36,14 @@ helm install redis bitnami/redis
 ## deploy pubsub component
 ```
 cd deploy
-kubectl apply -f pubsub-redis.yaml
+kubectl apply -f local/pubsub-redis.yaml
 dapr components -k
 ```
 
 # Demo1: redis state store
 ## deploy state store component
 ```
-kubectl apply -f statestore-redis.yaml
+kubectl apply -f local/statestore-redis.yaml
 dapr components -k
 ```
 
@@ -56,8 +56,8 @@ kubectl apply -f python-subscriber.yaml
 
 ## send messages
 ```
-kubectl port-forward service/react-form 8000:80
-//open http://localhost:8000 on your browser and sent message to topic A, B, C
+kubectl port-forward service/react-form 8080:80
+//open http://localhost:8080 on your browser and sent message to topic A, B, C
 ```
 
 ## check application logs
@@ -90,8 +90,8 @@ helm install memcached bitnami/memcached
 
 ## change state store component to memcached
 ```
-kubectl delete -f statestore-redis.yaml
-kubectl apply -f statestore-memcached.yaml
+kubectl delete -f local/statestore-redis.yaml
+kubectl apply -f local/statestore-memcached.yaml
 dapr components -k
 ```
 
@@ -102,8 +102,8 @@ kubectl rollout restart deployment react-form node-subscriber python-subscriber
 
 ## send messages
 ```
-kubectl port-forward service/react-form 8000:80
-//open http://localhost:8000 on your browser and sent message to topic A, B, C
+kubectl port-forward service/react-form 8080:80
+//open http://localhost:8080 on your browser and sent message to topic A, B, C
 ```
 
 ## check memcached records
