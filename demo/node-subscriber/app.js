@@ -18,12 +18,12 @@ app.get('/dapr/subscribe', (_req, res) => {
     res.json([
         {
             pubsubname: "pubsub",
-            topic: "A",
+            topic: "demo-topic-A",
             route: "A"
         },
         {
             pubsubname: "pubsub",
-            topic: "B",
+            topic: "demo-topic-B",
             route: "B"
         }
     ]);

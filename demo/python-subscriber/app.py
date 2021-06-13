@@ -20,7 +20,7 @@ dapr_url = "http://localhost:{}/v1.0/state/{}".format(dapr_port, statestore_name
 
 @app.route('/dapr/subscribe', methods=['GET'])
 def subscribe():
-    subscriptions = [{'pubsubname': 'pubsub', 'topic': 'A', 'route': 'A'}, {'pubsubname': 'pubsub', 'topic': 'C', 'route': 'C'}]
+    subscriptions = [{'pubsubname': 'pubsub', 'topic': 'demo-topic-A', 'route': 'A'}, {'pubsubname': 'pubsub', 'topic': 'demo-topic-C', 'route': 'C'}]
     return jsonify(subscriptions)
 
 @app.route('/A', methods=['POST'])

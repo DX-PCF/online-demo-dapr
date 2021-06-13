@@ -1,0 +1,23 @@
+apiVersion: dapr.io/v1alpha1
+kind: Component
+metadata:
+  name: gcp-pubsub
+  namespace: default
+spec:
+  type: pubsub.gcp.pubsub
+  version: v1
+  metadata:
+  - name: type
+    value: service_account
+  - name: projectId
+    value: online-demo-314614
+  - name: authUri
+    value: https://accounts.google.com/o/oauth2/auth
+  - name: tokenUri
+    value: https://oauth2.googleapis.com/token
+  - name: authProviderX509CertUrl
+    value: https://www.googleapis.com/oauth2/v1/certs
+  - name: clientX509CertUrl
+    value: https://www.googleapis.com/robot/v1/metadata/x509/Online-Demo.iam.gserviceaccount.com #replace PROJECT_NAME
+  - name: disableEntityManagement
+    value: "false"
