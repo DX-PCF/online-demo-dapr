@@ -7,16 +7,26 @@ spec:
   version: v1
   metadata:
   - name: type
-    value: service_account
+    value: "service_account"
   - name: projectId
-    value: online-demo-314614
+    value: "<project id>"
+  - name: identityProjectId
+    value: "<identity project id>"
+  - name: privateKeyId
+    value: "<private key id>"
+  - name: clientEmail
+    value: "<client email>"
+  - name: clientId
+    value: "client id"
   - name: authUri
-    value: https://accounts.google.com/o/oauth2/auth
+    value: "https://accounts.google.com/o/oauth2/auth"
   - name: tokenUri
-    value: https://oauth2.googleapis.com/token
+    value: "https://oauth2.googleapis.com/token"
   - name: authProviderX509CertUrl
-    value: https://www.googleapis.com/oauth2/v1/certs
+    value: "https://www.googleapis.com/oauth2/v1/certs"
   - name: clientX509CertUrl
-    value: https://www.googleapis.com/robot/v1/metadata/x509/online-demo.iam.gserviceaccount.com
+    value: "<client x509 cert url>"
+  - name: privateKey
+    value: "<private key>"
   - name: disableEntityManagement
-    value: false
+    value: "false"

@@ -7,9 +7,9 @@ spec:
   version: v1
   metadata:
   - name: redisHost
-    value: 10.94.192.67:6379
+    value: <host:port>
   - name: redisPassword
-    value: b3ab57d3-eb83-4c3d-87a4-cbc7a5161585
+    value: <redis password>
   - name: enableTLS
     value: false
   - name: maxRetries

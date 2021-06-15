@@ -7,7 +7,7 @@ spec:
   version: v1
   metadata:
   - name: hosts
-    value: 10.94.192.3:11211
+    value: <host>
   - name: maxIdleConnections
     value: 2
   - name: timeout
