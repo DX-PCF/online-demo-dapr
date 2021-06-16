@@ -44,6 +44,7 @@ dapr components -k
 - when using gcp cloud pubsub
 ```
 cd deploy
+// replace parameters of your own gcp environment
 kubectl apply -f gcp/pubsub-cloudpubsub.yaml
 dapr components -k
 ```
@@ -57,6 +58,7 @@ dapr components -k
 ```
 - when using gcp memorystore for redis
 ```
+// replace parameters of your own gcp environment
 kubectl apply -f gcp/statestore-memorystore-redis.yaml
 dapr components -k
 ```
@@ -96,6 +98,7 @@ hgetall python-subscriber||C
 ```
 - when using gcp memorystore for redis
 ```
+// Execute on a compute engine vm instance located within the same project and region
 telnet <redis host> 6379
 auth <auth string>
 hgetall node-subscriber||A
@@ -125,6 +128,7 @@ dapr components -k
 - when using gcp memorystore for memcached
 ```
 kubectl delete -f gcp/statestore-memorystore-redis.yaml
+// replace parameters of your own gcp environment
 kubectl apply -f gcp/statestore-memorystore-memcached.yaml
 dapr components -k
 ```
@@ -154,6 +158,7 @@ get node-subscriber||B
 
 - when using gcp memorystore for memcached
 ```
+// Execute on a compute engine vm instance located within the same project and region
 telnet <memcached host> 11211
 get python-subscriber||A
 get python-subscriber||C
